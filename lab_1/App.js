@@ -10,9 +10,7 @@ export default function App() {
   const windowWidth = useWindowDimensions().width;
   const windowHeight = useWindowDimensions().height;
   const [firstNum, setFirstNum] = React.useState(0);
-
-  const [clr, setClr] = React.useState("red");
-
+  const [clr, setClr] = React.useState("aqua");
   function getHex() {
     return Math.floor(Math.random() * 16777215).toString(16);
   }
@@ -27,7 +25,7 @@ export default function App() {
       backgroundColor={clr}
       flexDirection={windowWidth > windowHeight ? "row" : "column"}
     >
-      <Text style={styles.logo}>Exchanges</Text>
+      {windowWidth < windowHeight && <Text style={styles.logo}>Exchanges</Text>}
       <ExchangesBar firstNum={firstNum} setFirstNum={setFirstNum} />
       <Keyboard num={firstNum} setNum={setFirstNum} />
     </SafeAreaView>
