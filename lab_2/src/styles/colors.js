@@ -6,7 +6,8 @@ export const lightTheme = {
     card: "whitesmoke",
     text: "black",
     border: "blue",
-    notification: "blue"
+    notification: "blue",
+    item: "whitesmoke"
   }
 }
 
@@ -18,6 +19,7 @@ export const darkTheme = {
     card: "black",
     text: "whitesmoke",
     border: "lime",
-    notification: "lime"
+    notification: "lime",
+    item: "#080808"
   }
 }

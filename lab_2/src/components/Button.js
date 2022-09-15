@@ -2,7 +2,7 @@ import React from "react";
 import { TouchableOpacity, Text } from "react-native";
 import styles from "../styles/styles";
 
-import { SettingsContext } from "../SettingsProvider";
+import { SettingsContext } from "../context/SettingsProvider";
 
 const Button = ({ title, onPress }) => {
   const settingsCtx = React.useContext(SettingsContext)

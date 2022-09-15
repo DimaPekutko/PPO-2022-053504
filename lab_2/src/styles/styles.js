@@ -19,13 +19,29 @@ export default GLOBAL_STYLES = (isDarkTheme, fontSize) => {
     },
     rowView: {
       flexDirection: "row",
-      borderTopWidth: 2,
+      borderTopWidth: 1,
       borderTopColor: theme.colors.text,
+      marginVertical: 5,
+      backgroundColor: theme.colors.item,
     },
     text: {
       fontSize: fontSize,
       padding: 10,
+      paddingHorizontal: 20,
       color: theme.colors.text
+    },
+    textLogo: {
+      fontSize: fontSize*1.2,
+      padding: 10,
+      paddingHorizontal: 10,
+      color: theme.colors.primary
+    },
+    activeText: {
+      fontSize: fontSize,
+      padding: 10,
+      paddingHorizontal: 20,
+      color: theme.colors.background,
+      backgroundColor: theme.colors.primary
     },
     button: {
       margin: 10,
@@ -37,11 +53,15 @@ export default GLOBAL_STYLES = (isDarkTheme, fontSize) => {
     buttonText: {
       fontSize: fontSize,
       padding: 5,
+      textAlign: "center",
       color: theme.colors.background
     },
     textInput: {
       fontSize: fontSize,
-      color: theme.colors.text
+      color: theme.colors.text,
+      placeholderColor: theme.colors.text,
+      borderBottomWidth: 2,
+      borderBottomColor: theme.colors.primary,
     },
     checkBox: {
       marginTop: fontSize / 2,
