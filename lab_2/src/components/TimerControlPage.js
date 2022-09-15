@@ -80,14 +80,14 @@ const TimerControlPage = ({ route, navigation }) => {
     setTimePassed(0)
     setTimerStopped(false)
     BackgroundTimer.stopBackgroundTimer()
-    BackgroundTimer.runBackgroundTimer(timerCallback, 40)
+    BackgroundTimer.runBackgroundTimer(timerCallback, 80)
     phaseSound.play()
   }
 
   const onStopBtnPress = (e) => {
     if (timePassed == 0) return
     if (isTimerStopped) {
-      BackgroundTimer.runBackgroundTimer(timerCallback, 40)
+      BackgroundTimer.runBackgroundTimer(timerCallback, 80)
       phaseSound.play()
     }
     else {
