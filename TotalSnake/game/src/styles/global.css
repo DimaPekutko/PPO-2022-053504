@@ -1,0 +1,288 @@
+body {
+  margin: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+  background: black;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: "VT323";
+  font-size: 40px;
+}
+
+@font-face {
+  font-family: "VT323";
+  src: url("./../../public/VT323-Regular.ttf");
+}
+
+.title {
+  font-size: 7vh;
+}
+
+span {
+  font-size: 5vh;
+  padding-inline: 5%;
+}
+
+@keyframes border_animation {
+  0% {
+    border-color: lime;
+  }
+
+  50% {
+    border-color: blue;
+  }
+
+  100% {
+    border-color: lime;
+  }
+}
+
+label {
+  padding: 5%;
+}
+
+button {
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(45deg, black, black, darkblue);
+  border: 3px solid lime;
+  color: aquamarine;
+
+  animation: border_animation 5s linear infinite;
+}
+
+button:active {
+  background: linear-gradient(45deg, pink, slategray, blue);
+  color: black;
+}
+
+input {
+  border-radius: 10px;
+  padding-inline: 10px;
+  background: black;
+  color: lime;
+  border: 3px solid lime;
+  max-width: 80%;
+  outline: none;
+
+  animation: border_animation 5s linear infinite;
+}
+
+hr {
+  width: 80%;
+  margin-top: 10%;
+  /* margin-bottom: 10%; */
+
+  animation: border_animation 5s linear infinite;
+
+}
+
+.container {
+  background: linear-gradient(-45deg, #08162c, black);
+  color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.buttons_row {
+  display: flex;
+}
+
+.buttons_row>button {
+
+  margin-inline: 3%;
+}
+
+.game_screen_container {
+  overflow: hidden;
+}
+
+.game_field {
+  display: flex;
+  justify-content: center;
+}
+
+.joystick_wrap {
+  /* background-color: red; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* margin-top: 10%; */
+  /* margin-bottom: 20%; */
+
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  /* min-width: 80%;
+  min-height: ; */
+  /* aspect-ratio: 4/3; */
+  /* border: 3px solid red */
+}
+
+.joystick_row {
+  display: flex;
+  /* justify-items: center; */
+}
+
+.joystick_row button {
+  margin: 0 auto;
+  width: 33%;
+  aspect-ratio: 1/1;
+}
+
+#game_cnv {
+  background-color: black;
+  border-bottom: 3px solid lime;
+  border-radius: 20px;
+
+  animation: border_animation 5s linear infinite;
+}
+
+.game_player_top_bar {
+  display: flex;
+  align-self: flex-start;
+  border-bottom: 2px solid lime;
+  border-radius: 20px;
+  width: 100%;
+
+  animation: border_animation 5s linear infinite;
+}
+
+.game_player_top_bar img {
+  width: 10%;
+  padding-left: 3%;
+}
+
+.game_player_top_bar span {
+  padding-left: 5%;
+}
+
+.game_hearts_span {
+  font-size: 25px;
+  padding-top: 10px;
+}
+
+.main_menu_container {
+  /* align-items: center; */
+}
+
+@keyframes logo_animation {
+  0% {
+    color: aqua;
+  }
+
+  50% {
+    color: lime;
+  }
+
+  100% {
+    color: aqua;
+  }
+}
+
+#main_manu_logo {
+  font-size: 7vh;
+  background: linear-gradient(crimson, #050f1e);
+  color: aqua;
+  font-style: italic;
+  /* box-shadow: */
+  border-radius: 30px;
+  padding-inline: 20px;
+
+  margin-top: 20%;
+
+  animation: logo_animation 5s linear infinite;
+}
+
+.main_menu_items_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main_menu_items_container>button {
+  margin-top: 20%;
+}
+
+.colors_list_container {
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10%;
+}
+
+.colors_list_container>div {
+  background-color: red;
+  position: relative;
+  margin-inline: 10px;
+  border-radius: 100px;
+  padding: 10px;
+  margin-top: 5%;
+}
+
+.selected_color {
+  font-weight: bold;
+  border: 3px solid lime;
+  animation: border_animation 5s linear infinite;
+}
+
+.profile_container {
+  /* overflow-y: scroll; */
+}
+
+.profile_avatar {
+  width: 40%;
+  aspect-ratio: 1/1;
+}
+
+.game_statistics_row {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border: 2px solid lime;
+  border-radius: 15px;
+  /* border: 1px solid red */
+  animation: border_animation 5s linear infinite;
+  margin-bottom: 5%;
+}
+
+.game_statistics_row span {
+  padding-inline: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  width: 100%;
+  /* border: 1px solid blue; */
+}
+
+.game_finish_player_row {
+  display: flex;
+  flex-direction: row;
+  border: 3px solid lime;
+  border-radius: 15px;
+  width: 75%;
+  margin-bottom: 5%;
+  animation: border_animation 5s linear infinite;
+
+}
+
+.game_finish_player_row img {
+  width: 30%;
+  aspect-ratio: 1/1;
+}
+
+.game_finish_player_row span {
+  padding-top: 5%;
+}
